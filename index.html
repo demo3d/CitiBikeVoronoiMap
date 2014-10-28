@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="base.css" rel="stylesheet" />
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id='map'>
+  </div>
+  <div id='loading'>
+  </div>
+  <div id='selected'>
+    <h1>Real-time CitiBike Availability</h1>
+  </div>
+  <div id='selected2'>
+    <h1>Bike Availibility</h1>
+  </div>
+
+  </div>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js"></script>
+  <script src="https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js"></script>
+  <script src="lib/voronoi_map.js"></script>
+  <script>
+  
+
+  L.mapbox.accessToken = '<pk.eyJ1IjoiZG1lbGFuY29uIiwiYSI6Ik5Id21WMFkifQ.3k03RtRWaWa2y8xfzZCDGg>';
+  var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/dmelancon.jg9jhdgl/{z}/{x}/{y}.png', {
+    attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+  });
+  
+    map = L.mapbox.map('map', 'dmelancon.jg9jhdgl')
+    voronoiMap(map);
+  </script>
+</body>
+</html>

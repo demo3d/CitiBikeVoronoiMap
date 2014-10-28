@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+font-family: 'Oswald', sans-serif;  font-size: 14px;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.point-cell {
+  fill: none;
+  pointer-events: all;
+  stroke : none;
+  stroke-opacity: .5;
+  stroke-width: 4;
+
+}
+
+.point-cell:hover, .point-cell.selected {
+  opacity: 1;
+  stroke: #FFF;
+  stroke-opacity: 1;
+  stroke-width: 3px;
+}
+
+
+.point circle {
+  pointer-events: none;
+}
+
+#map {
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+}
+
+#selected,
+#selections {
+  position:absolute;
+  background-color: #FFF;
+  opacity: 0.8;
+  border-radius: 2px;
+  padding: 10px 10px 0 10px;
+}
+
+
+#loading.visible:after {
+  top: 50%;
+  left: 50%;
+  height: 28px;
+  width: 80px;
+  margin-left: -50px;
+  margin-top: -30px;
+  content: 'drawing...';
+  font-size: 18px;
+}
+
+
+#selected {
+  bottom: 10px;
+  left: 10px;
+  height: 28px;
+}
+
+#selected h1 {
+  font-size: 20px;
+  margin: 0px;
+  line-height: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hide,
+.show {
+  padding-bottom: 10px;
+  display: block;
+}
+
+.content {
+  display: none;
+}
+
+  #selected h1 {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+  }
+}
+
+.mapbox-control-info {
+  display: none !important;
+}
